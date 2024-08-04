@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Editor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/editor_styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container">
+            <a class="navbar-brand" href="#">𝕋ℕ'𝕤 𝕎𝕖𝕓-𝔼𝕕𝕚𝕥𝕠𝕣</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+              aria-controls="offcanvasDarkNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-light" tabindex="-1" id="offcanvasDarkNavbar"
+              aria-labelledby="offcanvasDarkNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasLightNavbarLabel">𝕋ℕ'𝕤 𝕎𝕖𝕓-𝔼𝕕𝕚𝕥𝕠𝕣</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                  aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="../../index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#editor">Editor</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Button to open the offcanvas sidebar -->
+    
+        </nav>
+      </header>
+      <!-- hero section -->
+    
+      <section class="hero d-flex flex-column justify-content-center editor">
+        <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h2 style="margin-top: 70px;">HTML</h2>
+            <textarea id="html-code" class="form-control" placeholder="Type HTML here..." rows="4"></textarea>
+        </div>
+        <div class="col-md-4">
+            <h2 style="margin-top: 70px;">CSS</h2>
+            <textarea id="css-code" class="form-control" placeholder="Type CSS here..." rows="4"></textarea>
+        </div>
+        <div class="col-md-4">
+            <h2 style="margin-top: 70px;">JavaScript</h2>
+            <textarea id="js-code" class="form-control" placeholder="Type JavaScript here..." rows="4"></textarea>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-6 text-center">
+            <button class="btn btn-primary" onclick="runCode()">Run</button>
+        </div>
+        <div class="col-6 text-center">
+            <button class="btn btn-danger" onclick="clearCode()">Clear All</button>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12">
+            <iframe id="output" class="output w-100" style="height: 500px;">Output Will display Here,Happy Coding...</iframe>
+        </div>
+    </div>
+</div>
+    </section>
+</header>
+
+
+
+
+
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted" id="contact">
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                    <div class="me-5 d-none d-lg-block">
+                        <span>Get connected with us on social networks:</span>
+                    </div>
+                    <div>
+                        <a href="" class="me-4 text-reset"><i class="fab fa-google"></i></a>
+                        <a href="" class="me-4 text-reset"><i class="fab fa-youtube"></i></a>
+                        <a href="" class="me-4 text-reset"><i class="fab fa-linkedin"></i></a>
+                        <a href="" class="me-4 text-reset"><i class="fab fa-github"></i></a>
+                    </div>
+                </section>
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3"></i>Tharvesh Nexus
+                        </h6>
+                        <p>Greetings from Tharvesh Nexus, the ultimate resource for tying concepts, tales, and
+                            experiences together. And I want to continue My journey with you.</p>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">Useful Links</h6>
+                        <p><a href="https://github.com/Tharvesh588/" class="text-reset">GitHub</a></p>
+                        <p><a href="https://www.linkedin.com/in/tharvesh2005" class="text-reset">LinkedIn</a></p>
+                        <p><a href="src/routes/repo.html" class="text-reset">Projects</a></p>
+                        <p><a href="src/routes/gallery.html" class="text-reset">Gallery</a></p>
+                    </div>
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">Eyes On</h6>
+                        <p><a href="#!" class="text-reset">Terms & Policy</a></p>
+                        <p><a href="#!" class="text-reset">Privacy</a></p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <p><i class="fas fa-home me-3"></i> Nagapattinam, TN 611001, India</p>
+                        <p><i class="fas fa-envelope me-3"></i> tharveshmuhaideen@gmail.com</p>
+                        <p><i class="fas fa-phone me-3"></i> +91 98949 29798</p>
+                        <p><i class="fas fa-print me-3"></i> +91 99940 21042</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            &copy; 2024 Copyright:
+            <a class="text-reset fw-bold">Tharvesh-Nexus.com</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <!--Typed Script libraries-->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="../js/editor_script.js"></script>
+</body>
+
+</html>
